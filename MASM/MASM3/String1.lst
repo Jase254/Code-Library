@@ -1,4 +1,4 @@
-Microsoft (R) Macro Assembler Version 6.14.8444		    04/04/17 21:59:07
+Microsoft (R) Macro Assembler Version 6.14.8444		    04/05/17 14:47:40
 String1.asm						     Page 1 - 1
 
 
@@ -6,15 +6,15 @@ String1.asm						     Page 1 - 1
 					.model flat
 					.stack 100h
 					
- 00000000			.data
+ 00000000				.data
 
- 00000000			.code
- 00000000				testLink proc
- 00000000  B8 FFFFFFFF				mov EAX, -1
- 00000005  C3					RET
- 00000006				testLink endp
+ 00000000				.code
+ 00000000			testLink proc Near32
+ 00000000  B8 FFFFFFFF			mov EAX, -1
+ 00000005  C3				RET
+ 00000006			testLink endp
 				END
-Microsoft (R) Macro Assembler Version 6.14.8444		    04/04/17 21:59:07
+Microsoft (R) Macro Assembler Version 6.14.8444		    04/05/17 14:47:40
 String1.asm						     Symbols 2 - 1
 
 

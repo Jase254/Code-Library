@@ -19,15 +19,15 @@ include \masm32\include\masm32.inc
 includelib \masm32\lib\kernel32.lib
 includelib \masm32\lib\masm32.lib
 
-	EXTERN testLink:Near32
-	
 	ExitProcess PROTO Near32 stdcall, dwExitCode:dword  				;capitalization not necessary
-	ascint32  	PROTO  stdcall, lpStringToConvert:dword					;Converts ascii char to integer
+	ascint32  	PROTO Near32 stdcall, lpStringToConvert:dword					;Converts ascii char to integer
 	intasc32	PROTO Near32 stdcall, lpStringToHold:dword, dVal:dword	;Converts integer to ascii 
 	putstring	PROTO Near32 stdcall, lpStringToPrint:dword				;Outputs string to screen 
 	getche		PROTO Near32 stdcall  									;returns character in the AL register & echos to screen 
  	getch		PROTO Near32 stdcall  									;returns character in the AL register
 	putch		PROTO Near32 stdcall, bChar:byte						;Outputs character to screen 
+	
+	EXTERN testLink:PROC
 	
   .code
 _start:

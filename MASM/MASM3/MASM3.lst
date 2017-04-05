@@ -1,4 +1,4 @@
-Microsoft (R) Macro Assembler Version 6.14.8444		    04/04/17 21:59:07
+Microsoft (R) Macro Assembler Version 6.14.8444		    04/05/17 14:47:40
 MASM3.asm						     Page 1 - 1
 
 
@@ -2703,15 +2703,15 @@ MASM3.asm						     Page 1 - 1
 				includelib \masm32\lib\kernel32.lib
 				includelib \masm32\lib\masm32.lib
 
-					EXTERN testLink:Near32
-					
 					ExitProcess PROTO Near32 stdcall, dwExitCode:dword  				;capitalization not necessary
-					ascint32  	PROTO  stdcall, lpStringToConvert:dword					;Converts ascii char to integer
+					ascint32  	PROTO Near32 stdcall, lpStringToConvert:dword					;Converts ascii char to integer
 					intasc32	PROTO Near32 stdcall, lpStringToHold:dword, dVal:dword	;Converts integer to ascii 
 					putstring	PROTO Near32 stdcall, lpStringToPrint:dword				;Outputs string to screen 
 					getche		PROTO Near32 stdcall  									;returns character in the AL register & echos to screen 
 				 	getch		PROTO Near32 stdcall  									;returns character in the AL register
 					putch		PROTO Near32 stdcall, bChar:byte						;Outputs character to screen 
+					
+					EXTERN testLink:PROC
 					
  00000000			  .code
  00000000			_start:
@@ -2720,7 +2720,7 @@ MASM3.asm						     Page 1 - 1
 					invoke ExitProcess, 0						;invokes the exit process
  00000011				PUBLIC _start
 				END
-Microsoft (R) Macro Assembler Version 6.14.8444		    04/04/17 21:59:07
+Microsoft (R) Macro Assembler Version 6.14.8444		    04/05/17 14:47:40
 MASM3.asm						     Symbols 2 - 1
 
 
