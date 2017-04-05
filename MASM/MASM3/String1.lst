@@ -1,0 +1,55 @@
+Microsoft (R) Macro Assembler Version 6.14.8444		    04/04/17 21:59:07
+String1.asm						     Page 1 - 1
+
+
+					.486
+					.model flat
+					.stack 100h
+					
+ 00000000			.data
+
+ 00000000			.code
+ 00000000				testLink proc
+ 00000000  B8 FFFFFFFF				mov EAX, -1
+ 00000005  C3					RET
+ 00000006				testLink endp
+				END
+Microsoft (R) Macro Assembler Version 6.14.8444		    04/04/17 21:59:07
+String1.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00000100 Para	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000000 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000006 Para	  Public  'CODE'	
+
+
+Procedures,  parameters and locals:
+
+                N a m e                 Type     Value    Attr
+
+testLink . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000006 Public
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000000h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+
+	   0 Warnings
+	   0 Errors
